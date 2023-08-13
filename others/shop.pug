@@ -1,0 +1,27 @@
+extends layouts/main-layout.pug 
+block styles
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/product.css") 
+
+block content 
+    main
+        if prods.length>0
+            .grid
+                each product in prods
+                    article.card.product-item
+                        header.card_header
+                            h1.product_title #{product.title}
+            
+                        div.card_image
+                            img(src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="A Book")
+            
+                        div.card_content
+                            h2.product_price $19.99
+                            p.product_description A very interesting book
+
+                
+                        .card_actions
+                            button.btn Add to cart
+        else 
+            h1 No Products     
+
