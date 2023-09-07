@@ -1,9 +1,12 @@
 {
   "name": "node-first-app",
   "version": "1.0.0",
+  "homepage": "https://Bittu04567891.github.io/Book-Store",
   "description": "Complete node.js guide",
   "main": "app.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
@@ -11,6 +14,7 @@
   "author": "Bittu",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "nodemon": "^3.0.1"
   },
   "dependencies": {
